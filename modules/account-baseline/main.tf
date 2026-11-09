@@ -59,6 +59,7 @@ resource "aws_iam_service_linked_role" "config" {
 }
 
 resource "aws_config_configuration_recorder" "this" {
+  #checkov:skip=CKV2_AWS_48:Secondary-region instances skip global resource types on purpose; the home region records them once, avoiding duplicate IAM items.
   name     = "default"
   role_arn = "arn:${local.partition}:iam::${local.account_id}:role/aws-service-role/config.amazonaws.com/AWSServiceRoleForConfig"
 

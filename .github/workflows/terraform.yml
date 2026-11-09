@@ -147,3 +147,4 @@ jobs:
           severity: HIGH,CRITICAL
           exit-code: "1"
           format: table
+          version: v0.76.2 # newer check bundles need a recent Trivy; v0.69.4-v0.69.6 were the compromised builds

@@ -3,6 +3,7 @@
 # group and a gateway endpoint so S3 traffic stays off the internet.
 
 data "aws_availability_zones" "available" {
+  #checkov:skip=CKV_AWS_394:Only the first az_count zones are used; AZ names sort stably, so a new zone is appended rather than changing the selection.
   state = "available"
 }
 

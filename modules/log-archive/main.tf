@@ -118,7 +118,7 @@ resource "aws_kms_alias" "logs" {
 
 # ---------------------------------------------------------------- access-log bucket
 # S3 server access logging can only deliver to targets encrypted with SSE-S3, not KMS.
-#trivy:ignore:AVD-AWS-0132
+#trivy:ignore:AWS-0132
 resource "aws_s3_bucket" "access_logs" {
   #checkov:skip=CKV_AWS_18:This is the access-log target itself; logging it to itself would loop.
   #checkov:skip=CKV_AWS_144:Cross-region replication of access logs is not required.
@@ -151,6 +151,7 @@ resource "aws_s3_bucket_versioning" "access_logs" {
   }
 }
 
+#trivy:ignore:AWS-0132
 resource "aws_s3_bucket_server_side_encryption_configuration" "access_logs" {
   bucket = aws_s3_bucket.access_logs.id
 
