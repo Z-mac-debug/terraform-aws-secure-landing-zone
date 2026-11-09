@@ -1,0 +1,5 @@
+name_prefix            = "acme"
+organization_id        = "o-abc123defg"
+management_account_id  = "111111111111"
+log_archive_account_id = "222222222222"
+audit_account_id       = "333333333333"

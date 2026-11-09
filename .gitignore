@@ -1,0 +1,20 @@
+# Terraform working files and state (state lives in the S3 backend, never in git)
+.terraform/
+*.tfstate
+*.tfstate.*
+crash.log
+crash.*.log
+*.tfplan
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Real variable and backend values; commit only the *.example files
+*.tfvars
+*.tfvars.json
+!*.tfvars.example
+backend.hcl
+
+.terraform.d/
+.DS_Store

@@ -1,0 +1,5 @@
+workload_account_id     = "444444444444"
+environment             = "nonprod"
+log_archive_bucket_name = "acme-org-log-archive-222222222222"
+log_archive_kms_key_arn = "arn:aws:kms:eu-west-2:222222222222:key/..."
+deploy_repository       = "Z-mac-debug/secure-cicd-pipeline"
